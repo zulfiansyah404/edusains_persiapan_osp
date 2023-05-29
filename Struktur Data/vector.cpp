@@ -46,6 +46,8 @@ int main () {
     sort(v.begin(), v.end()); // v = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
     printV(v);
 
+    cout << v[1] << endl;
+
     // isEmpty
     if (v.empty()) {
         cout << "Kosong" << endl;
