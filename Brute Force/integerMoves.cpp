@@ -18,7 +18,7 @@ int main () {
         if (x == 0 && y == 0) {
             cout << 0 << endl;
         } else
-        if (idx*idx == dist) {
+        if (idx*idx == dist) {  
             cout << 1 << endl;
         } else {
             cout << 2 << endl;
