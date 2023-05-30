@@ -28,6 +28,22 @@ int solveTopDown(int x) {
     return best;
 }
 
+int solveBottomUp(int x) {
+    int fx[x+1];
+    fx[0] = 0;
+
+    for (int i = 1; i <= x; i++) {
+        fx[i] = 1e9;
+        for (int j = 0; j < N; j++) {
+            if (i >= coin[j]) {
+                fx[i] = min(fx[i], fx[i - coin[j]] + 1);
+            }
+        }
+    }
+
+    return fx[x];
+}
+
 int main () {
     cin >> N;
     for (int i = 0; i < N; i++) {
